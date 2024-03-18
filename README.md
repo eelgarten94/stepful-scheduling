@@ -18,6 +18,7 @@ The server should be enabled on port 5001.
 Navigate to `/client`
 
 Run `npm install`
+
 Run `npm run dev` to start the server on port 3000.
 
 # API & Database
