@@ -22,7 +22,7 @@ Run `npm run dev` to start the server on port 3000.
 
 # API & Database
 
-The API code can be found in the `/server` folder in `db.js`.
+The API code can be found in the `/server` folder in `index.js`.
 
 The `database.sql` file in the `/server` folder will create a database when executed in a Postgres environment.
 
