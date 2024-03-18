@@ -134,7 +134,7 @@ export const recordCallFeedback = async ({ notes, slotId, satisfactionScore }: R
 }
 
 export const getCompletedCalls = async (coachId: string): Promise<Call[]> => {
-  const resp = await fetch(`${API_BASE_URL}/getCalls/${coachId}`)
+  const resp = await fetch(`${API_BASE_URL}/getCalls/${coachId}`, { cache: 'no-store' })
   const results = await resp.json()
   const calls = results.map((call: any) => ({
     startTime: call.start_time,
