@@ -27,7 +27,6 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({ coachingSlot
           <StudentSlotCard key={idx} {...slot} />
         ))}
       </Box>
-
     </Box>
   )
 

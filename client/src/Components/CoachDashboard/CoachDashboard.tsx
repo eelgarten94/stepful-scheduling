@@ -33,6 +33,7 @@ export const CoachDashboard: React.FC<CoachDashboardProps> = ({ coachId, coachSl
     const newSlotStart = new Date(`${date} ${startTime}`)
 
     for (let i = 0; i < coachSlots.length; i++) {
+      // Prevent submission if there is a time conflict
       if (startTimeHasConflicts(newSlotStart, coachSlots[i].startTime, coachSlots[i].endTime)) {
         return setHelperText('This appointment time has a conflict, please choose a different time.')
       }
