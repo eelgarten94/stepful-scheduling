@@ -8,8 +8,7 @@ This app contains both a server and a client implementation for the Stepful Sche
 Before you start, make sure you have Node.js installed on your system. You can download and install Node.js from the official Node.js website.
 
 # Running the server
-Navigate to the `/server` directory 
-Run `npm install`
+Navigate to the `/server` directory and run `npm install`
 
 To start the server, run `node index.js` or `nodemon index.js` to enable watch mode. 
 
