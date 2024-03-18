@@ -33,11 +33,12 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({ coachingSlot
 
 }
 
-const StudentSlotCard: React.FC<Slot & { handleBookSlot?: () => void }> = ({ startTime, coachName, coachPhoneNumber, handleBookSlot }) => {
+const StudentSlotCard: React.FC<Slot & { handleBookSlot?: () => void }> = ({ startTime, endTime, coachName, coachPhoneNumber, handleBookSlot }) => {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', width: '400px', border: '1px solid white', borderRadius: '4px', padding: '16px', justifyContent: 'space-between' }}>
       <Box sx={{ flexDirection: 'column' }}>
         <Typography variant="body2">Start time: {new Date(startTime).toLocaleString()}</Typography>
+        <Typography variant="body2">End time: {new Date(endTime).toLocaleString()}</Typography>
         <Typography variant="body2">Coach: {coachName}</Typography>
         {coachPhoneNumber && <Typography variant="body2">Phone Number: {coachPhoneNumber}</Typography>}
       </Box>

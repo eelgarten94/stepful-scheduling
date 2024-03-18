@@ -99,6 +99,7 @@ export const getStudentSlots = async (studentId: string): Promise<Slot[]> => {
   const results = await resp.json()
   const studentSlots = results.map((slot: any) => ({
     startTime: slot.start_time,
+    endTime: slot.end_time,
     id: slot.id,
     studentId: slot.student_id,
     coachId: slot.coach_id,

@@ -1,13 +1,13 @@
 'use client'
-import { Box, Button, InputLabel, MenuItem, Select, Typography } from "@mui/material"
-import React from 'react'
-import AddIcon from '@mui/icons-material/Add';
-import { Call, Slot } from "@/types/types";
-import { createCoachSlot } from "@/utils/fetch";
-import { startTimeHasConflicts } from "@/utils/date";
 import useHandleReload from "@/app/hooks/useHandleReload";
-import { CompleteCallDialog } from "./CompleteCallDialog";
+import { Call, Slot } from "@/types/types";
+import { startTimeHasConflicts } from "@/utils/date";
+import { createCoachSlot } from "@/utils/fetch";
+import AddIcon from '@mui/icons-material/Add';
+import { Box, Button, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import React from 'react';
 import { useCoachDashboard } from "./CoachDashboard.hooks";
+import { CompleteCallDialog } from "./CompleteCallDialog";
 
 interface CoachDashboardProps {
   coachId: string
@@ -92,11 +92,12 @@ export const CoachDashboard: React.FC<CoachDashboardProps> = ({ coachId, coachSl
 }
 
 
-const CoachSlotCard: React.FC<Slot & { handleClick?: () => void }> = ({ startTime, isBooked, studentName, studentPhoneNumber, handleClick }) => {
+const CoachSlotCard: React.FC<Slot & { handleClick?: () => void }> = ({ startTime, endTime, isBooked, studentName, studentPhoneNumber, handleClick }) => {
   return (
     <Box sx={{ backgroundColor: isBooked ? '#1F9328' : '#A8A023', display: 'flex', flexDirection: 'row', border: '1px solid white', borderRadius: '4px', padding: '16px', width: '400px', justifyContent: 'space-between' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography variant="body2">Start time: {new Date(startTime).toLocaleString()}</Typography>
+        <Typography variant="body2">End time: {new Date(endTime).toLocaleString()}</Typography>
         {!isBooked && <Typography variant="body2">Open</Typography>}
         {isBooked && <Typography variant="body2">Booked by: {studentName}</Typography>}
         {isBooked && <Typography variant="body2">Phone number: {studentPhoneNumber}</Typography>}
