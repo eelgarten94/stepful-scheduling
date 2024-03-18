@@ -1,10 +1,9 @@
 'use client'
-import { API_BASE_URL } from '@/config/constants'
-import { Box, Button, Typography } from '@mui/material'
+import { User } from '@/types/types'
+import { Box, Typography } from '@mui/material'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 import { UserCard } from './UserCard'
-import { useRouter } from 'next/navigation'
-import { User } from '@/types/types'
 
 
 interface StudentsViewProps {

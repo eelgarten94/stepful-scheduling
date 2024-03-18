@@ -1,5 +1,4 @@
 'use client'
-import { API_BASE_URL } from "@/config/constants"
 import { Box, Typography } from "@mui/material"
 import React from "react"
 import { UserCard } from "./UserCard"

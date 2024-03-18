@@ -1,7 +1,6 @@
 'use client'
-
 import { Slot } from "@/types/types"
-import { Box, Button, Card, Typography } from "@mui/material"
+import { Box, Button, Typography } from "@mui/material"
 import { useStudentDashboard } from "./StudentDashboard.hooks"
 
 interface StudentDashboardProps {
