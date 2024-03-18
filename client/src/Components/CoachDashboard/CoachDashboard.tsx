@@ -94,7 +94,7 @@ export const CoachDashboard: React.FC<CoachDashboardProps> = ({ coachId, coachSl
 
 const CoachSlotCard: React.FC<Slot & { handleClick?: () => void }> = ({ startTime, isBooked, studentName, studentPhoneNumber, handleClick }) => {
   return (
-    <Box sx={{ backgroundColor: isBooked ? 'green' : 'initial', display: 'flex', flexDirection: 'row', border: '1px solid white', borderRadius: '4px', padding: '16px', width: '400px', justifyContent: 'space-between' }}>
+    <Box sx={{ backgroundColor: isBooked ? '#1F9328' : '#A8A023', display: 'flex', flexDirection: 'row', border: '1px solid white', borderRadius: '4px', padding: '16px', width: '400px', justifyContent: 'space-between' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <Typography variant="body2">Start time: {new Date(startTime).toLocaleString()}</Typography>
         {!isBooked && <Typography variant="body2">Open</Typography>}
